@@ -29,11 +29,24 @@ const list = [
 ];
 
 
+
+const serchBook = (e) => {
+  let st = state.list.map(t => t.title);
+  let stt = st.join();
+  let s = e.target.value;
+ if(s.includes(stt))
+ console.log("Find it");
+}
+
+
 export default function App() {
+  this.state = {
+    list,
+  }
   return (
     <div className="App">
-      <h1>Hello CodeSandbox</h1>
-      <h2>Start editing to see some magic happen!</h2>
+      <h1>Search Book</h1>
+      <input onChange={serchBook} />
     </div>
   );
 }
