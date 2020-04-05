@@ -32,9 +32,8 @@ const list = [
 
 const serchBook = (e) => {
   let st = state.list.map(t => t.title);
-  let stt = st.join();
   let s = e.target.value;
- if(s.includes(stt))
+ if(st.includes(s))
  console.log("Find it");
 }
 
